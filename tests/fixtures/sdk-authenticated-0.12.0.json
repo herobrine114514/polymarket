@@ -1,0 +1,223 @@
+{
+  "started_at": "2026-10-03T07:48:24.196Z",
+  "scope": "synthetic_secure_sdk_transport_and_normalization_only",
+  "sdk_version": "0.12.0",
+  "native_network_calls": 0,
+  "real_credentials_used": false,
+  "user_wallet_used": false,
+  "real_orders_submitted": 0,
+  "production_database_written": false,
+  "real_server_order_id_verified": false,
+  "account_gate_passed": false,
+  "ack": {
+    "ok": true,
+    "orderId": "0xe22865de3841e280a72132a62080a9e7caa1e9b4e257ab8b0c91255b5063f1e5",
+    "status": "matched",
+    "makingAmount": "2.6",
+    "takingAmount": "5",
+    "tradeIds": [
+      "fixture-trade"
+    ],
+    "transactionsHashes": []
+  },
+  "sdk_normalized": {
+    "order": {
+      "id": "0xe22865de3841e280a72132a62080a9e7caa1e9b4e257ab8b0c91255b5063f1e5",
+      "outcome": "Yes",
+      "owner": "SYNTHETIC-OFFLINE-OWNER",
+      "price": "0.52",
+      "side": "BUY",
+      "status": "MATCHED",
+      "conditionId": "0x4444444444444444444444444444444444444444444444444444444444444444",
+      "assetId": "77648812782670860460512307594061302913369283834606025297048026922953510464427",
+      "tokenId": "77648812782670860460512307594061302913369283834606025297048026922953510464427",
+      "associateTrades": [
+        "fixture-trade"
+      ],
+      "createdAt": "2026-10-03T07:20:00.000Z",
+      "makerAddress": "0xE160065C2b7bC261697455AD98B0b32Db339aE6A",
+      "orderType": "FOK",
+      "originalSize": "5",
+      "sizeMatched": "5"
+    },
+    "open_order_pages": [
+      {
+        "items": [],
+        "hasMore": false
+      }
+    ],
+    "account_trade_pages": [
+      {
+        "items": [
+          {
+            "id": "fixture-trade",
+            "outcome": "Yes",
+            "owner": "SYNTHETIC-OFFLINE-OWNER",
+            "price": "0.52",
+            "side": "BUY",
+            "size": "5",
+            "status": "TRADE_STATUS_CONFIRMED",
+            "conditionId": "0x4444444444444444444444444444444444444444444444444444444444444444",
+            "assetId": "77648812782670860460512307594061302913369283834606025297048026922953510464427",
+            "tokenId": "77648812782670860460512307594061302913369283834606025297048026922953510464427",
+            "bucketIndex": 0,
+            "feeRateBps": "700",
+            "updatedAt": "2026-10-03T07:20:02.000Z",
+            "makerAddress": "0xE160065C2b7bC261697455AD98B0b32Db339aE6A",
+            "makerOrders": [],
+            "matchedAt": "2026-10-03T07:20:01.000Z",
+            "takerOrderId": "0xe22865de3841e280a72132a62080a9e7caa1e9b4e257ab8b0c91255b5063f1e5",
+            "traderSide": "TAKER",
+            "transactionHash": "0x5555555555555555555555555555555555555555555555555555555555555555"
+          }
+        ],
+        "hasMore": true,
+        "nextCursor": "Mg=="
+      },
+      {
+        "items": [],
+        "hasMore": false
+      }
+    ]
+  },
+  "frozen_identity": {
+    "expected_order_id": "0xe22865de3841e280a72132a62080a9e7caa1e9b4e257ab8b0c91255b5063f1e5",
+    "condition_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+    "token_id": "77648812782670860460512307594061302913369283834606025297048026922953510464427",
+    "funder": "0xE160065C2b7bC261697455AD98B0b32Db339aE6A",
+    "shares": "5",
+    "limit_price": "0.52",
+    "order_type": "FOK",
+    "reserve_micro": 2687360,
+    "maximum_fee_micro": 87360
+  },
+  "fixture_account": {
+    "scope": "synthetic_dedicated_account_observation",
+    "capital_micro": 50000000,
+    "cash_micro": 47312650,
+    "positions": {
+      "77648812782670860460512307594061302913369283834606025297048026922953510464427": "5"
+    },
+    "fee_receipts": {
+      "fixture-trade": {
+        "scope": "synthetic_measured_fee_receipt",
+        "trade_id": "fixture-trade",
+        "order_id": "0xe22865de3841e280a72132a62080a9e7caa1e9b4e257ab8b0c91255b5063f1e5",
+        "condition_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+        "token_id": "77648812782670860460512307594061302913369283834606025297048026922953510464427",
+        "funder": "0xE160065C2b7bC261697455AD98B0b32Db339aE6A",
+        "transaction_hash": "0x5555555555555555555555555555555555555555555555555555555555555555",
+        "status": "CONFIRMED",
+        "fee_paid_micro": 87350
+      }
+    }
+  },
+  "frozen_order_sha256": "7e0188f320bc5787653d1e68feb6ee7c5f5c9b93e657fdf078ec63d53df52bf2",
+  "completed_at": "2026-10-03T07:48:24.661Z",
+  "checks": [
+    {
+      "name": "provided_fixture_credentials_do_not_invoke_wallet_operations",
+      "passed": true
+    },
+    {
+      "name": "sdk_post_response_retains_expected_fixture_order_identity",
+      "passed": true
+    },
+    {
+      "name": "order_normalized_token_id_and_compatibility_alias_agree",
+      "passed": true
+    },
+    {
+      "name": "sdk_account_trade_pages_are_consumed_through_terminal_cursor",
+      "passed": true
+    },
+    {
+      "name": "account_trade_has_rate_but_no_measured_fee_amount",
+      "passed": true
+    },
+    {
+      "name": "hmac_authentication_binds_exact_serialized_body",
+      "passed": true
+    },
+    {
+      "name": "hmac_authentication_binds_timestamp_method_and_route",
+      "passed": true
+    },
+    {
+      "name": "get_query_is_not_appended_to_the_sdk_signed_route",
+      "passed": true
+    },
+    {
+      "name": "sdk_timeout_post_is_not_automatically_retried",
+      "passed": true
+    },
+    {
+      "name": "sdk_http500_post_is_not_automatically_retried",
+      "passed": true
+    }
+  ],
+  "requests": [
+    {
+      "method": "GET",
+      "path": "/auth/api-keys",
+      "query": {},
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hmac_independently_validated": true
+    },
+    {
+      "method": "POST",
+      "path": "/order",
+      "query": {},
+      "body_sha256": "1e1b275b2c2c996fb606df86c64b11df7a55459f79cf71f3c73e55dbda57c84b",
+      "hmac_independently_validated": true
+    },
+    {
+      "method": "GET",
+      "path": "/data/order/0xe22865de3841e280a72132a62080a9e7caa1e9b4e257ab8b0c91255b5063f1e5",
+      "query": {},
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hmac_independently_validated": true
+    },
+    {
+      "method": "GET",
+      "path": "/data/orders",
+      "query": {},
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hmac_independently_validated": true
+    },
+    {
+      "method": "GET",
+      "path": "/data/trades",
+      "query": {},
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hmac_independently_validated": true
+    },
+    {
+      "method": "GET",
+      "path": "/data/trades",
+      "query": {
+        "next_cursor": "Mg=="
+      },
+      "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "hmac_independently_validated": true
+    },
+    {
+      "method": "POST",
+      "path": "/order",
+      "query": {},
+      "body_sha256": "1e1b275b2c2c996fb606df86c64b11df7a55459f79cf71f3c73e55dbda57c84b",
+      "hmac_independently_validated": true
+    },
+    {
+      "method": "POST",
+      "path": "/order",
+      "query": {},
+      "body_sha256": "1e1b275b2c2c996fb606df86c64b11df7a55459f79cf71f3c73e55dbda57c84b",
+      "hmac_independently_validated": true
+    }
+  ],
+  "passed": 10,
+  "wallet_operations": 0,
+  "auth_header_values_saved": false,
+  "source_sha256": "8685e483e337e5637bfec18691121a16a927f4582c676440b26e43efe3ab8b20"
+}
