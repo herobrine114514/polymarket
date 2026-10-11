@@ -1,0 +1,22 @@
+[project]
+name = "polycast"
+version = "0.1.0"
+description = "Evidence-first Polymarket macro predictor and paper trader"
+requires-python = ">=3.11"
+dependencies = ["tzdata>=2026.1; sys_platform == 'win32'"]
+license = "MIT"
+readme = "README.md"
+
+[project.scripts]
+polycast = "polycast.cli:main"
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["polycast*"]
+
+[tool.setuptools.package-data]
+polycast = ["*.mjs"]
+

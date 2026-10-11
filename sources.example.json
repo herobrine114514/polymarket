@@ -1,0 +1,12 @@
+[
+  {
+    "source_id": "example_macro_wire",
+    "name": "Example licensed macro news feed",
+    "url": "https://example.com/your-authorized-macro-feed.xml",
+    "topic": "macro",
+    "license_confirmed": false,
+    "license_scope": "summary_storage_and_model_analysis",
+    "license_reference": "contract-or-terms-reference",
+    "license_checked_at": "2026-09-27T00:00:00Z"
+  }
+]
