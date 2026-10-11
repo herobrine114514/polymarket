@@ -1,0 +1,29 @@
+{
+  "page": {
+    "id": "bklmvp2c52bl",
+    "name": "Coinbase Exchange",
+    "url": "http://status.exchange.coinbase.com",
+    "time_zone": "America/Los_Angeles",
+    "updated_at": "2026-10-02T17:21:42.740-07:00"
+  },
+  "components": [
+    {
+      "id": "xffjmgtm0dgw",
+      "name": "BTC-USD",
+      "status": "operational",
+      "updated_at": "2020-04-30T15:11:29.495-07:00"
+    },
+    {
+      "id": "1x5x3dcdkp4p",
+      "name": "Coinbase Exchange REST API",
+      "status": "degraded_performance",
+      "updated_at": "2026-05-08T16:05:36.583-07:00"
+    },
+    {
+      "id": "j1b4fl9w7fcw",
+      "name": "Markets",
+      "status": "operational",
+      "updated_at": "2018-09-20T15:58:16.993-07:00"
+    }
+  ]
+}
